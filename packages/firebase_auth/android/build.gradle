@@ -3,7 +3,7 @@ version '1.0-SNAPSHOT'
 
 buildscript {
     repositories {
-        google()
+        maven { url 'https://dl.google.com/dl/android/maven2' }
         jcenter()
     }
 
@@ -14,7 +14,7 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
-        google()
+        maven { url 'https://dl.google.com/dl/android/maven2' }
         jcenter()
     }
 }
@@ -22,7 +22,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 16
