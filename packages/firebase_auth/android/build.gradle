@@ -3,19 +3,23 @@ version '1.0-SNAPSHOT'
 
 buildscript {
     repositories {
-    maven { url 'https://dl.google.com/dl/android/maven2' }
+    //maven { url 'https://dl.google.com/dl/android/maven2' }
+        //jcenter()
+        //google()
         jcenter()
         google()
     }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.android.support:support-v4:26.0.2'
     }
 }
 
 rootProject.allprojects {
     repositories {
-        maven { url 'https://dl.google.com/dl/android/maven2' }
+        //maven { url 'https://dl.google.com/dl/android/maven2' }
+        //jcenter()
         jcenter()
         google()
     }
@@ -24,18 +28,19 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 26
 
     defaultConfig {
         minSdkVersion 21
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        targetSdkVersion 28
+        targetSdkVersion 26
     }
     lintOptions {
         disable 'InvalidPackage'
     }
     dependencies {
         implementation 'com.google.guava:guava:20.0'
-        api 'com.google.firebase:firebase-auth:16.0.2'
+        implementation 'androidx.appcompat:appcompat:1.1.0-alpha02'
+        api 'com.google.firebase:firebase-auth:16.2.0'
     }
 }
