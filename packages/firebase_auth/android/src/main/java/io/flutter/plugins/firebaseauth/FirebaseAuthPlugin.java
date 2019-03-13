@@ -5,7 +5,6 @@
 package io.flutter.plugins.firebaseauth;
 
 import android.net.Uri;
-import android.support.annotation.NonNull;
 import android.util.SparseArray;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
